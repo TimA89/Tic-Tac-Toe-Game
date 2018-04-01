@@ -43,6 +43,16 @@ const changePWFailure = function () {
   $('#message').css('background-color', 'red')
 }
 
+const newGameRequest = function () {
+  $('#message').text('Please start a new game')
+  $('#message').css('background-color', 'green')
+}
+
+const newGameFailure = function () {
+  $('#message').text('Error on change password')
+  $('#message').css('background-color', 'red')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -51,5 +61,7 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   changePWSuccess,
-  changePWFailure
+  changePWFailure,
+  newGameRequest,
+  newGameFailure
 }

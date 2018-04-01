@@ -8,6 +8,9 @@
 
 const authEvents = require('./events.js')
 
+const gameEvents = require('./gamelogic')
+
 $(() => {
   authEvents.addHandlers()
+  gameEvents.gameHandlers()
 })

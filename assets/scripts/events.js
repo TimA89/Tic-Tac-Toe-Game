@@ -36,11 +36,17 @@ const onChangePW = function (event) {
   console.log(data)
 }
 
+// const gameEvents = function (event) {
+//   event.preventDefault()
+//   gameLogic.game()
+// }
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change_pass').on('submit', onChangePW)
+  // $('.box').on('click', gameEvents)
 }
 
 module.exports = {
