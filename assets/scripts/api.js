@@ -30,6 +30,7 @@ const signOut = function () {
 }
 
 const changePW = function (data) {
+  console.log(data)
   return $.ajax({
     url: config.apiUrl + '/change-password/' + store.user.id,
     method: 'PATCH',
@@ -41,9 +42,22 @@ const changePW = function (data) {
   })
 }
 
+const newGame = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'POST',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {}
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   signOut,
-  changePW
+  changePW,
+  newGame
 }

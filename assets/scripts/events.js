@@ -4,6 +4,7 @@ const api = require('./api')
 
 const ui = require('./ui')
 
+
 const onSignUp = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -20,6 +21,15 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
+const onNewGame = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.newGame(data)
+  console.log('x')
+    .then(ui.newGameSuccess)
+    .catch(ui.newGameFailure)
+}
+
 const onSignOut = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -27,6 +37,7 @@ const onSignOut = function (event) {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
+
 const onChangePW = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -36,17 +47,12 @@ const onChangePW = function (event) {
   console.log(data)
 }
 
-// const gameEvents = function (event) {
-//   event.preventDefault()
-//   gameLogic.game()
-// }
-
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change_pass').on('submit', onChangePW)
-  // $('.box').on('click', gameEvents)
+  $('newGame').on('submit', onNewGame)
 }
 
 module.exports = {

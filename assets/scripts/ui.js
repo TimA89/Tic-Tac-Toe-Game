@@ -1,8 +1,11 @@
 const store = require('./store')
 
+const gameEvents = require('./gamelogic')
+
 const signUpSuccess = function () {
-  $('#message').text('Signed up successfully')
-  $('#message').css('background-color', 'green')
+  $('#newGame').show()
+  $('#messageNewGame').text('Signed Up successfully. Would you like to start a New Game')
+  $('#messageNewGame').css('background-color', 'green')
 }
 
 const signUpFailure = function () {
@@ -11,10 +14,10 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('Signed in successfully')
-  $('#message').css('background-color', 'green')
+  $('#newGame').show()
+  $('#messageNewGame').text('Signed In successfully. Would you like to start a New Game')
+  $('#messageNewGame').css('background-color', 'green')
   store.user = data.user
-  console.log(store.user)
 }
 
 const signInFailure = function () {
@@ -43,13 +46,16 @@ const changePWFailure = function () {
   $('#message').css('background-color', 'red')
 }
 
-const newGameRequest = function () {
-  $('#message').text('Please start a new game')
-  $('#message').css('background-color', 'green')
+const newGameSuccess = function (data) {
+  $('.container').show()
+  $('.top').hide()
+  store.game = data.game
+  gameEvents.startCount()
+  gameEvents.gameHandlers()
 }
 
 const newGameFailure = function () {
-  $('#message').text('Error on change password')
+  $('#messageNewGame').text('Couldn\'t start a game')
   $('#message').css('background-color', 'red')
 }
 
@@ -62,6 +68,6 @@ module.exports = {
   signOutFailure,
   changePWSuccess,
   changePWFailure,
-  newGameRequest,
+  newGameSuccess,
   newGameFailure
 }

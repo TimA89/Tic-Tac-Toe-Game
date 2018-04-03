@@ -14,24 +14,36 @@
 </head>
 
 <body class="col-xs-10">
-  <nav>
+  <div class="col-xs-8 top">
     <form id="sign-up">
       <fieldset>
         <legend>Sign up!</legend>
         <input type="text" name="credentials[email]" id="sign-up-email" placeholder="Email">
         <input type="password" name="credentials[password]" id="sign-up-password" placeholder="Password">
         <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Confirm password">
-        <input type="submit" name="submit" value="Sign up!">
+        <br><input type="submit" name="submit" value="Sign up!">
       </fieldset><br>
     </form>
+    <br><p>Or Sign in if you have an existing account</p><br>
     <form id="sign-in">
       <fieldset>
         <legend>Sign in!</legend>
         <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Email">
         <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Password">
-        <input type="submit" name="submit" value="Sign in!">
+        <br><input type="submit" name="submit" value="Sign in!">
       </fieldset><br>
     </form>
+    <form id="newGame">
+      <fieldset>
+        <br>
+        <span id="messageNewGame"><br></span>
+        <br><input type="submit" name="submit" value="New Game" id="newGameButton">
+      </fieldset><br>
+    </form>
+
+  </div>
+
+  <div class="col-xs-8 container">
     <form id="sign-out">
       <fieldset>
         <legend>Sign out!</legend>
@@ -41,18 +53,14 @@
     <form id="change_pass">
       <fieldset>
         <legend>Change password!</legend>
-        <input type="password" name="password[old]" id="oldpw" placeholder="Old password">
-        <input type="password" name="password[new]" id="newpw" placeholder="New password">
-        <input type="submit" name="submit" value="Change password!">
+        <input type="password" name="passwords[old]" id="oldpw" placeholder="Old password">
+        <input type="password" name="passwords[new]" id="newpw" placeholder="New password">
+        <br><input type="submit" name="submit" value="Change password!">
       </fieldset><br>
     </form>
-
-
-  </nav>
-  <p id="message"></p>
-  <br>
-
-  <div class="col-xs-8 container">
+    <br>
+    <span id="message"><br></span>
+    <br>
 
     <div class="row">
       <div class="col-xs-4 record" id="playerX">Player<br>X</div>
@@ -92,11 +100,11 @@
 
       <div class="row">
         <div class="col-xs-6 games" id="restart">
-          <input type="submit" name="submit" value="Restart the game!">
+          <input type="submit" name="submit" value="Restart">
         </div>
 
         <div class="col-xs-6 games" id="refresh">
-         <input type="submit" name="submit" value="Reset all Points!">
+         <input type="submit" name="submit" value="New Game">
         </div>
         <br>
         <br>

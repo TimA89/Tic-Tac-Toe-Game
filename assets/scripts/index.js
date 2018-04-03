@@ -8,9 +8,9 @@
 
 const authEvents = require('./events.js')
 
-const gameEvents = require('./gamelogic')
+$('#newGame').hide()
+$('.container').hide()
 
 $(() => {
   authEvents.addHandlers()
-  gameEvents.gameHandlers()
 })
