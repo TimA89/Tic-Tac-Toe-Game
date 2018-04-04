@@ -30,5 +30,7 @@ agains a partner.
 
 # Wireframes and Users stories
 You can find a links for wireframe and users story pictures underneath:
+
 https://imgur.com/ShLBkSU
+
 https://imgur.com/fVnwDw0
