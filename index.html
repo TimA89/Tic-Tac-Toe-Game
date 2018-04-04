@@ -15,9 +15,9 @@
 
 <body class="col-xs-10">
   <div class="col-xs-8 top">
-  <br>
-  <span id="messageNewGame"><br></span>
-  <br>
+    <br>
+    <span id="messageNewGame"><br></span>
+    <br>
     <form id="sign-up">
       <fieldset>
         <legend>Sign up!</legend>
@@ -59,58 +59,47 @@
     <br>
     <br>
     <form id="newGame">
-          <fieldset>
-            <br><input type="submit" type="reset" name="submit" value="New Game" id="newGameButton">
-          </fieldset><br>
-        </form>
+      <fieldset>
+        <br><input type="submit" name="submit" value="New Game" id="newGameButton">
+      </fieldset>
+    </form>
   </div>
-
-
-  <div class="col-xs-8 container">
+  <div class="col-xs-7 container">
 
     <div class="row">
       <div class="col-xs-4 record" id="playerX">Player<br>X</div>
       <div class="col-xs-4 record">Tie</div>
       <div class="col-xs-4 record" id="playerO">Player<br>O</div>
     </div>
-      <br>
 
-
-      <div class="row">
-        <div class="col-xs-4 record" id="scoreX">4</div>
-        <div class="col-xs-4 record" id="tie">5</div>
-        <div class="col-xs-4 record" id="scoreO">6</div>
-      </div>
-      <br>
-      <br>
-
-
-      <div class="row">
-        <div class="col-xs-4 box" id="0"></div>
-        <div class="col-xs-4 box" id="1"></div>
-        <div class="col-xs-4 box" id="2"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-4 box" id="3"></div>
-        <div class="col-xs-4 box" id="4"></div>
-        <div class="col-xs-4 box" id="5"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-4 box" id="6"></div>
-        <div class="col-xs-4 box" id="7"></div>
-        <div class="col-xs-4 box" id="8"></div>
-      </div>
-      <br>
-      <br>
-      <form id="showGames">
-            <fieldset>
-              <br><input type="submit" type="reset" name="submit" value="Games Played">
-            </fieldset><br>
-          </form>
-
+    <div class="row">
+      <div class="col-xs-4 box" id="0"></div>
+      <div class="col-xs-4 box" id="1"></div>
+      <div class="col-xs-4 box" id="2"></div>
     </div>
+
+    <div class="row">
+      <div class="col-xs-4 box" id="3"></div>
+      <div class="col-xs-4 box" id="4"></div>
+      <div class="col-xs-4 box" id="5"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-4 box" id="6"></div>
+      <div class="col-xs-4 box" id="7"></div>
+      <div class="col-xs-4 box" id="8"></div>
+    </div>
+    <br>
+    <div class="row">
+    <form id="showGames">
+      <fieldset>
+        <br><input class="col-xs-6" type="submit" name="submit" value="Games Played">
+        <div class="col-xs-6 game-content"></div>
+      </fieldset><br>
+    </form>
+  </div>
+
+  </div>
 
 
 </body>

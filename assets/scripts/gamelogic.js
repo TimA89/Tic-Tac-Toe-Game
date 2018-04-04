@@ -2,8 +2,6 @@ const store = require('./store')
 
 const api = require('./api')
 
-const ui = require('./gameUI')
-
 $('.box:reset')
 
 let turnNumber
@@ -91,8 +89,6 @@ const gameLogic = (num) => {
       store.game.cells[num] = valueTurn
       obj.game.cell.value = valueTurn
       api.updateGame(obj)
-        .then(ui.updateSuccess)
-        .catch()
     } else {
       $('#message').text('This place is taken')
       $('#message').css('background-color', 'green')

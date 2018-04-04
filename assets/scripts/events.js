@@ -56,7 +56,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#change_pass').on('submit', onChangePW)
   $('#newGame').on('submit', onNewGame)
-  $('showGames').on('submit', onShowGames)
+  $('#showGames').on('submit', onShowGames)
 }
 
 module.exports = {

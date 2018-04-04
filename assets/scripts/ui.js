@@ -68,7 +68,7 @@ const newGameSuccess = function (data) {
   $('.top').hide()
   store.game = data.game
   gameEvents.gameHandlers()
-  console.log(store)
+  $('.game-content').text('')
 }
 
 const newGameFailure = function () {
@@ -76,8 +76,9 @@ const newGameFailure = function () {
   $('#messageNewGame').css('background-color', 'red')
 }
 
-const showSuccess = function () {
-  console.log('yes')
+const showSuccess = function (data) {
+  $('.game-content').text('')
+  $('.game-content').append(data.games.length)
 }
 
 const showFailure = function () {

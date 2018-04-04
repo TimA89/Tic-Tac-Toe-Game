@@ -5,23 +5,28 @@ $green: #0f0;
 $red: #f00;
 $blue: #00f;
 $white: #fff;
-
+$text-align: center;
+$border-box: border-box;
 
 .box {
   background-color: $green;
   border: 3px solid $red;
-  box-sizing: border-box;
+  box-sizing: $border-box;
   padding: 15%;
-  text-align: center;
+  text-align: $text-align;
   width: 33.3%;
 }
 
 .games {
-  text-align: center;
+  text-align: $text-align;
 }
 
 .record {
-  text-align: center;
+  text-align: $text-align;
+}
+
+.game-content {
+  text-align: $text-align;
 }
 
 // p {
