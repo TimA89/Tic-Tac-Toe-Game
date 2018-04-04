@@ -36,6 +36,7 @@ const signInFailure = function () {
 }
 
 const signOutSuccess = function () {
+  $('.user-account').rest()
   $('#messageNewGame').text('Signed out successfully')
   $('#messageNewGame').css('background-color', 'green')
   setTimeout(function () {
@@ -45,7 +46,8 @@ const signOutSuccess = function () {
   $('.top').show()
   $('.container').hide()
   $('.account').hide()
-  $('.user-account').rest()
+  $('.user-account').reset()
+  console.log('ver 1.0')
   store.user = null
 }
 
