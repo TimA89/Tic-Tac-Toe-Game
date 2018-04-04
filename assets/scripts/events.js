@@ -33,6 +33,7 @@ const onSignOut = function (event) {
   api.signOut(data)
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
+  $('#sign-in')[0].reset()
 }
 
 const onChangePW = function (event) {
