@@ -36,11 +36,16 @@ const signInFailure = function () {
 }
 
 const signOutSuccess = function () {
-  $('#message').text('Signed out successfully')
-  $('#message').css('background-color', 'green')
+  $('#messageNewGame').text('Signed out successfully')
+  $('#messageNewGame').css('background-color', 'green')
+  setTimeout(function () {
+    $('#messageNewGame').text('')
+    $('messageNewGame').css('background-color', 'white')
+  }, 3000)
+  $('.top').show()
   $('.container').hide()
-  $('#newGame').hide()
-  $('#change_pass').hide()
+  $('.account').hide()
+  $('.user-account').rest()
   store.user = null
 }
 
@@ -82,7 +87,8 @@ const showSuccess = function (data) {
 }
 
 const showFailure = function () {
-  console.log('ups')
+  $('.game-content').text('')
+  $('.game-content').text('Failed to show Games Played')
 }
 
 module.exports = {
