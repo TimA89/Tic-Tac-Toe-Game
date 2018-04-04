@@ -46,7 +46,6 @@ const signOutSuccess = function () {
   $('.top').show()
   $('.container').hide()
   $('.account').hide()
-  console.log('ver 1.0')
   store.user = null
 }
 
