@@ -15,6 +15,9 @@
 
 <body class="col-xs-10">
   <div class="col-xs-8 top">
+  <br>
+  <span id="messageNewGame"><br></span>
+  <br>
     <form id="sign-up">
       <fieldset>
         <legend>Sign up!</legend>
@@ -22,9 +25,10 @@
         <input type="password" name="credentials[password]" id="sign-up-password" placeholder="Password">
         <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Confirm password">
         <br><input type="submit" name="submit" value="Sign up!">
+        <br><br>
+        <p>Or Sign In if you have an existing account</p><br>
       </fieldset><br>
     </form>
-    <br><p>Or Sign in if you have an existing account</p><br>
     <form id="sign-in">
       <fieldset>
         <legend>Sign in!</legend>
@@ -33,17 +37,9 @@
         <br><input type="submit" name="submit" value="Sign in!">
       </fieldset><br>
     </form>
-    <form id="newGame">
-      <fieldset>
-        <br>
-        <span id="messageNewGame"><br></span>
-        <br><input type="submit" name="submit" value="New Game" id="newGameButton">
-      </fieldset><br>
-    </form>
-
   </div>
 
-  <div class="col-xs-8 container">
+  <div class="col-xs-8 account">
     <form id="sign-out">
       <fieldset>
         <legend>Sign out!</legend>
@@ -61,6 +57,16 @@
     <br>
     <span id="message"><br></span>
     <br>
+    <br>
+    <form id="newGame">
+          <fieldset>
+            <br><input type="submit" type="reset" name="submit" value="New Game" id="newGameButton">
+          </fieldset><br>
+        </form>
+  </div>
+
+
+  <div class="col-xs-8 container">
 
     <div class="row">
       <div class="col-xs-4 record" id="playerX">Player<br>X</div>
@@ -97,19 +103,12 @@
         <div class="col-xs-4 box" id="8"></div>
       </div>
       <br>
-
-      <div class="row">
-        <div class="col-xs-6 games" id="restart">
-          <input type="submit" name="submit" value="Restart">
-        </div>
-
-        <div class="col-xs-6 games" id="refresh">
-         <input type="submit" name="submit" value="New Game">
-        </div>
-        <br>
-        <br>
-
-      </div>
+      <br>
+      <form id="showGames">
+            <fieldset>
+              <br><input type="submit" type="reset" name="submit" value="Games Played">
+            </fieldset><br>
+          </form>
 
     </div>
 

@@ -50,7 +50,34 @@ const newGame = function () {
       contentType: 'application/json',
       Authorization: 'Token token=' + store.user.token
     },
-    data: {}
+    data: ''
+  })
+}
+
+const showGame = function () {
+  console.log(store)
+  return $.ajax({
+    url: config.apiUrl + '/games/', // + store.user.id,
+    method: 'GET',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const updateGame = function (dat) {
+  console.log('data is ', dat) // log data
+  console.log('id is ', store.game.id) // log id
+  console.log('token is ', store.user.token) // log token
+  return $.ajax({
+    url: config.apiUrl + '/games/' + store.game.id,
+    method: 'PATCH',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: dat
   })
 }
 
@@ -59,5 +86,7 @@ module.exports = {
   signIn,
   signOut,
   changePW,
-  newGame
+  newGame,
+  updateGame,
+  showGame
 }

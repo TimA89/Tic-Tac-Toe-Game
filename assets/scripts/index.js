@@ -8,7 +8,7 @@
 
 const authEvents = require('./events.js')
 
-$('#newGame').hide()
+$('.account').hide()
 $('.container').hide()
 
 $(() => {
