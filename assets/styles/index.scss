@@ -2,16 +2,18 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 $green: #0f0;
-$red: #f00;
+$black: #25292e;
 $blue: #00f;
 $white: #fff;
 $text-align: center;
 $border-box: border-box;
+$grey: #404448;
 
 .box {
-  background-color: $green;
-  border: 3px solid $red;
+  background-color: $grey;
+  border: 3px solid $black;
   box-sizing: $border-box;
+  color: $white;
   padding: 15%;
   text-align: $text-align;
   width: 33.3%;
