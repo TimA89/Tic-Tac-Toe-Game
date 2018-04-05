@@ -61,6 +61,7 @@ const changePWSuccess = function () {
     $('#message').text('')
     $('#message').css('background-color', 'white')
   }, 5000)
+  $('#change_pass')[0].reset()
 }
 
 const changePWFailure = function () {
